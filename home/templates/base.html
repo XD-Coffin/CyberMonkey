@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kavya Footwares.</title>
+    <title>SnkrDunk</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
         <div class="container-fluid">
           <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="/">
-          <h3>Kavya-Footwares</h3>
+          <h3>SnkrDunk</h3>
           </div>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
           <!-- Navbar Collapse -->
@@ -53,7 +53,7 @@
 
               {% else %}
               <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
-                <a class="btn btn-primary" href="#">LOGO</a>
+                <a class="btn btn-primary" href="#">Footwares</a>
               </li>
 
               {% endif %}
@@ -70,7 +70,13 @@
 
 
     {% endblock %}
+    {% if request.user.is_authenticated %}
+                <a class="btn btn-info" href="{% url 'add_blog' %}">Add-Posts</a>
+              
+                <a class="btn btn-danger" href="{% url 'logout_view' %}">Logout</a>
 
+              {% else %}
+    {% endif %}
 
     <footer class="position-relative z-index-10 d-print-none">
    
@@ -78,7 +84,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-left">
-              <p class="text-sm mb-md-0">&copy; 2023, Kavya Footwares.  All rights reserved.</p>
+              <p class="text-sm mb-md-0">&copy; 2023, SnkrDunk-Nepal.  All rights reserved.</p>
             </div>
            
           </div>
